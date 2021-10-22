@@ -1,4 +1,6 @@
 const express = require('express')
+const cors = require('cors')
+
 const grossPay = require('./utils/gross')
 const pensionAmount = require('./utils/pension')
 const niPay = require('./utils/ni')
@@ -6,7 +8,9 @@ const taxablePay = require('./utils/taxablepay')
 const incomeTax = require('./utils/incomeTax')
 const netPay = require('./utils/netpay')
 
+
 const app = express()
+app.use(cors())
 const port = process.env.PORT || 3002
 
 
