@@ -11,12 +11,12 @@ const taxablePay = (salary) => {
         hourly = parseFloat(((taxablePay) / 1950).toFixed(2))
     }
     else {
-        taxablePay = salary
-        yearly = parseFloat(taxablePay.toFixed(2))
-        monthly = parseFloat(((taxablePay) / 12).toFixed(2))
-        weekly = parseFloat(((taxablePay) / 52).toFixed(2))
-        daily = parseFloat(((taxablePay) / 355).toFixed(2))
-        hourly = parseFloat(((taxablePay) / 1950).toFixed(2))
+        taxablePay = 0
+        yearly = 0
+        monthly = 0
+        weekly = 0
+        daily = 0
+        hourly = 0
     }
 
     return {
