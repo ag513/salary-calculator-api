@@ -4,7 +4,7 @@ const pensionAmount = require('./utils/pension')
 const niPay = require('./utils/ni')
 const taxablePay = require('./utils/taxablepay')
 const incomeTax = require('./utils/incomeTax')
-const netPay = require('./utils/netPay')
+const netPay = require('./utils/netpay')
 
 const app = express()
 const port = process.env.PORT || 3002
