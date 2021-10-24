@@ -19,13 +19,14 @@ app.get('*', (req, res) => {
     if (!annualPay) {
         return res.send('Enter salary')
     }
-    const gross = grossPay(req.query.annualPay)
-    const pension = pensionAmount(req.query.annualPay)
-    const nationalinsurance = niPay(req.query.annualPay)
-    const taxableincome = taxablePay(req.query.annualPay)
-    const incometax = incomeTax(req.query.annualPay)
-    const netpay = netPay(req.query.annualPay)
+    const gross = grossPay(annualPay)
+    const pension = pensionAmount(annualPay)
+    const nationalinsurance = niPay(annualPay)
+    const taxableincome = taxablePay(annualPay)
+    const incometax = incomeTax(annualPay)
+    const netpay = netPay(annualPay)
     res.send({
+        salary: annualPay,
         gross,
         pension,
         nationalinsurance,
