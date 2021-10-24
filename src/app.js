@@ -14,7 +14,7 @@ app.use(cors())
 const port = process.env.PORT || 3002
 
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     const annualPay = req.query.annualPay;
     if (!annualPay) {
         return res.send('Enter salary')
