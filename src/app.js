@@ -14,11 +14,9 @@ app.use(cors())
 const port = process.env.PORT || 3002
 
 
-app.get('*', (req, res) => {
-    const annualPay = req.query.annualPay;
-    if (!annualPay) {
-        return res.send('Enter salary')
-    }
+app.get('/:pay', (req, res) => {
+    const annualPay = req.params.pay;
+    console.log(annualPay)
     const gross = grossPay(annualPay)
     const pension = pensionAmount(annualPay)
     const nationalinsurance = niPay(annualPay)
